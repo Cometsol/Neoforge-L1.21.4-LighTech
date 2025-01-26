@@ -1,6 +1,5 @@
 package com.cometsol.lighttech.datagen;
 
-import com.cometsol.lighttech.Blocks.ModBlocks;
 import com.cometsol.lighttech.Items.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;

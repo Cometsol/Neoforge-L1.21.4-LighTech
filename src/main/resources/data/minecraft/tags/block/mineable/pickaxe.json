@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "lighttech:clearcrystal_block",
+    "lighttech:clearcrystalglass",
+    "lighttech:clearcrystal_cluster"
+  ]
+}

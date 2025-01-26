@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "d":"lighttech:clearcrystaldust",
+    "s": "minecraft:glass"
+  },
+  "pattern": [
+    "sds",
+    "dsd",
+    "sds"
+  ],
+  "result": {
+    "count": 5,
+    "id":"lighttech:clearcrystalglass"
+  }
+}

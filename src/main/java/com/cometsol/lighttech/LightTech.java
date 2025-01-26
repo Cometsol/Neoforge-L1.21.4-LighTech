@@ -3,15 +3,6 @@ package com.cometsol.lighttech;
 import com.cometsol.lighttech.Blocks.ModBlocks;
 import com.cometsol.lighttech.Items.ModCreativeModeTabs;
 import com.cometsol.lighttech.Items.ModItems;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 import net.neoforged.api.distmarker.Dist;
@@ -63,14 +54,7 @@ public class LightTech {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.CLEARCRYSTALDUST);
-            event.accept(ModItems.CLEARCRYSTALSHARD);
-        }
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.CLEARCRYSTAL_BLOCK);
-            event.accept(ModBlocks.CLEARCRYSTALGLASS);
-        }
+        
     }
 
 

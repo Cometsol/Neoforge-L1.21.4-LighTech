@@ -1,10 +1,12 @@
 {
   "block.lighttech.clearcrystal_block": "Clear Crystal Block",
   "block.lighttech.clearcrystalglass": "Clear Crystal Glass",
+  "block.lighttech.clearcrystalcluster": "Clear Crystal Cluster",
   "item.lighttech.clearcrystalshard": "Clear Crystal Shard",
   "item.lighttech.clearcrystaldust": "Clear Crystal Dust",
   "item.lighttech.clearcrystal_block": "Clear Crystal Block",
   "item.lighttech.clearcrystalglass": "Clear Crystal Glass",
+  "item.lighttech.clearcrystalcluster": "Clear Crystal Cluster",
   "creativetab.lighttech.lighttech_items": "LightTech Items",
   "creativetab.lighttech.lighttech_blocks": "LightTech Blocks"
 }

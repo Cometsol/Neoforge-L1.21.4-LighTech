@@ -17,9 +17,9 @@ public class LightTechBlockTags extends BlockTagsProvider {
     }
 
     protected void addTags(HolderLookup.Provider provider) {
-        this.tag(net.neoforged.neoforge.common.Tags.Blocks.ORES).add((Block) ModBlocks.CLEARCRYSTAL_Cluster.get());
-        this.tag(BlockTags.NEEDS_IRON_TOOL).add((Block) ModBlocks.CLEARCRYSTAL_Cluster.get()).add((Block) ModBlocks.CLEARCRYSTAL_BLOCK.get());
-        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add((Block) ModBlocks.CLEARCRYSTAL_Cluster.get()).add((Block) ModBlocks.CLEARCRYSTAL_BLOCK.get()).add((Block) ModBlocks.CLEARCRYSTALGLASS.get());
-        this.tag(Tags.Blocks.CLUSTERS).add((Block) ModBlocks.CLEARCRYSTAL_Cluster.get());
+        this.tag(net.neoforged.neoforge.common.Tags.Blocks.ORES).add((Block) ModBlocks.CLEARCRYSTALCluster.get());
+        this.tag(BlockTags.NEEDS_IRON_TOOL).add((Block) ModBlocks.CLEARCRYSTALCluster.get()).add((Block) ModBlocks.CLEARCRYSTAL_BLOCK.get());
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add((Block) ModBlocks.CLEARCRYSTALCluster.get()).add((Block) ModBlocks.CLEARCRYSTAL_BLOCK.get()).add((Block) ModBlocks.CLEARCRYSTALGLASS.get());
+        this.tag(Tags.Blocks.CLUSTERS).add((Block) ModBlocks.CLEARCRYSTALCluster.get());
     }
 }
