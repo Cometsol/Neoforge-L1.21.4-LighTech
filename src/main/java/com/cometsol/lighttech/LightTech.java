@@ -1,6 +1,7 @@
 package com.cometsol.lighttech;
 
 import com.cometsol.lighttech.Blocks.ModBlocks;
+import com.cometsol.lighttech.Items.ModCreativeModeTabs;
 import com.cometsol.lighttech.Items.ModItems;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -26,30 +27,14 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
+import static com.cometsol.lighttech.Items.ModCreativeModeTabs.CREATIVE_MODE_TAB;
+
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(LightTech.MODID)
-public class LightTech
-{
-    // Define mod id in a common place for everything to reference
+public class LightTech {
     public static final String MODID = "lighttech";
-    // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
-
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS;
-
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB_LIGHT_TECH ;
-
-    static {
-        CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, "lighttech");
-        TAB_LIGHT_TECH = CREATIVE_MODE_TABS.register("lighttech", () -> CreativeModeTab.builder().title(Component.literal("Light Tech")).icon(() -> ModItems.CLEARCRYSTALSHARD.get().getDefaultInstance()).withTabsBefore(CreativeModeTabs.COMBAT)
-            .displayItems((parameters, output) -> {
-            ModItems.ITEMS.getEntries().forEach((e) -> {
-                Item item = (Item)e.get();
-                output.accept(item);
-            });
-        }).build());
-    }
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
@@ -60,15 +45,15 @@ public class LightTech
 
         NeoForge.EVENT_BUS.register(this);
 
+        ModBlocks.register(modEventBus);
+        ModItems.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
-
-        ModBlocks.BLOCKS.register(modEventBus);
-        ModItems.ITEMS.register(modEventBus);
-        //CREATIVE_MODE_TABS.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)

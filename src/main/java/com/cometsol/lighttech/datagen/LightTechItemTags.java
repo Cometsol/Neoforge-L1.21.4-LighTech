@@ -29,6 +29,5 @@ public class LightTechItemTags extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         this.tag(Tags.Items.GEMS).add((Item) ModItems.CLEARCRYSTALSHARD.get());
         this.tag(Clear_Crystal).add((Item) ModItems.CLEARCRYSTALSHARD.get());
-        this.tag(STORAGEBLOCKS).add((Item) ModBlocks.CLEARCRYSTAL_BLOCK_ITEM.get());
     }
 }
