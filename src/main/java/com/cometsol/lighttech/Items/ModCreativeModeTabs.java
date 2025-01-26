@@ -18,7 +18,7 @@ public class ModCreativeModeTabs {
 
     public static final Supplier<CreativeModeTab> LIGHTTECH_ITEMS = CREATIVE_MODE_TAB.register("lighttech_items_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CLEARCRYSTALSHARD.get()))
-                    .title(Component.translatable("creativetab.lighttech_items"))
+                    .title(Component.translatable("creativetab.lighttech.lighttech_items"))
                     .displayItems((itemDisplayParameters, output) ->{
                       output.accept(ModItems.CLEARCRYSTALSHARD);
                       output.accept(ModItems.CLEARCRYSTALDUST);
@@ -26,7 +26,7 @@ public class ModCreativeModeTabs {
 
     public static final Supplier<CreativeModeTab> LIGHTTECH_BLOCKS = CREATIVE_MODE_TAB.register("lighttech_blocks_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.CLEARCRYSTAL_BLOCK))
-                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(LightTech.MODID, "lightech_items_tab"))
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(LightTech.MODID, "lighttech_items_tab"))
                     .title(Component.translatable("creativetab.lighttech.lighttech_blocks"))
                     .displayItems((itemDisplayParameters, output) ->{
                         output.accept(ModBlocks.CLEARCRYSTAL_BLOCK);
