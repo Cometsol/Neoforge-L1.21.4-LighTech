@@ -131,28 +131,28 @@
       "y": 270
     },
     "stage=5,facing=up": {
-      "model": "lighttech:block/clearcrystalcluster_stage_5"
+      "model": "lighttech:block/clearcrystalcluster"
     },
     "stage=5,facing=down": {
-      "model": "lighttech:block/clearcrystalcluster_stage_5",
+      "model": "lighttech:block/clearcrystalcluster",
       "x": 180
     },
     "stage=5,facing=east": {
-      "model": "lighttech:block/clearcrystalcluster_stage_5",
+      "model": "lighttech:block/clearcrystalcluster",
       "x": 90,
       "y": 90
     },
     "stage=5,facing=north": {
-      "model": "lighttech:block/clearcrystalcluster_stage_5",
+      "model": "lighttech:block/clearcrystalcluster",
       "x": 90
     },
     "stage=5,facing=south": {
-      "model": "lighttech:block/clearcrystalcluster_stage_5",
+      "model": "lighttech:block/clearcrystalcluster",
       "x": 90,
       "y": 180
     },
     "stage=5,facing=west": {
-      "model": "lighttech:block/clearcrystalcluster_stage_5",
+      "model": "lighttech:block/clearcrystalcluster",
       "x": 90,
       "y": 270
     }

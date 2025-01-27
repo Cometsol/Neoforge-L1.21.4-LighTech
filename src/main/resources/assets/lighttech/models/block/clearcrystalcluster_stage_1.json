@@ -1,6 +1,6 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "minecraft:block/crose",
+	"parent": "minecraft:block/cube",
 	"textures": {
 		"0": "minecraft:block/stone",
 		"1": "lighttech:block/clearcrystalcluster",

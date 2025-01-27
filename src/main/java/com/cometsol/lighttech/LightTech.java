@@ -18,8 +18,6 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
-import static com.cometsol.lighttech.Items.ModCreativeModeTabs.CREATIVE_MODE_TAB;
-
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(LightTech.MODID)
