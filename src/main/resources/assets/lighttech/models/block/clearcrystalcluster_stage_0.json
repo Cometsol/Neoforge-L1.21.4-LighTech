@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "minecraft:block/cube",
+	"parents": "minecraft:block/block",
 	"textures": {
-		"0": "minecraft:block/stone",
-		"particle": "minecraft:block/stone"
+		"0": "lighttech:block/clusterbase_stone",
+		"particle": "lighttech:block/clusterbase_stone"
 	},
 	"elements": [
 		{

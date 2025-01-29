@@ -31,7 +31,13 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) ->{
                         output.accept(ModBlocks.CLEARCRYSTAL_BLOCK);
                         output.accept(ModBlocks.CLEARCRYSTALGLASS);
+                        output.accept(ModBlocks.CLEARCRYSTALCLUSTER_NODE);
                         output.accept(ModBlocks.CLEARCRYSTALCLUSTER);
+                        output.accept(ModBlocks.CLEARCRYSTALCLUSTER_STAGE_0);
+                        output.accept(ModBlocks.CLEARCRYSTALCLUSTER_STAGE_1);
+                        output.accept(ModBlocks.CLEARCRYSTALCLUSTER_STAGE_2);
+                        output.accept(ModBlocks.CLEARCRYSTALCLUSTER_STAGE_3);
+                        output.accept(ModBlocks.CLEARCRYSTALCLUSTER_STAGE_4);
                     }).build());
 
     public static void register(IEventBus eventBus) {

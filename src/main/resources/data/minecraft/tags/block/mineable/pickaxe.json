@@ -3,6 +3,11 @@
   "values": [
     "lighttech:clearcrystal_block",
     "lighttech:clearcrystalglass",
-    "lighttech:clearcrystal_cluster"
+    "lighttech:clearcrystalcluster",
+    "lighttech:clearcrystalcluster_stage_0",
+    "lighttech:clearcrystalcluster_stage_1",
+    "lighttech:clearcrystalcluster_stage_2",
+    "lighttech:clearcrystalcluster_stage_3",
+    "lighttech:clearcrystalcluster_stage_4"
   ]
 }

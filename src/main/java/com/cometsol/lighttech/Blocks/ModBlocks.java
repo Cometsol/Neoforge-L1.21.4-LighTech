@@ -1,8 +1,11 @@
 package com.cometsol.lighttech.Blocks;
 
 
+import com.cometsol.lighttech.Blocks.Base.CrystalCluster;
+import com.cometsol.lighttech.Blocks.Base.CrystalClusterNode;
 import com.cometsol.lighttech.Items.ModItems;
 import com.cometsol.lighttech.LightTech;
+import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -12,6 +15,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.TransparentBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -22,6 +27,7 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
 
+    public static final EnumProperty<Direction> FACING = BlockStateProperties.FACING;
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(LightTech.MODID);
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
@@ -48,53 +54,39 @@ public class ModBlocks {
             .sound(SoundType.GLASS)
             .requiresCorrectToolForDrops()));
 
-    public static final DeferredBlock<Block> CLEARCRYSTALCLUSTER= registerBlock("clearcrystalcluster", () -> new Block(BlockBehaviour.Properties.of()
+    public static final DeferredBlock<Block> CLEARCRYSTALCLUSTER = registerBlock("clearcrystalcluster", () -> new CrystalCluster(3.0F, 4.0F, BlockBehaviour.Properties.of()
             .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("lighttech","clearcrystalcluster")))
             .strength(0.5f)
             .noOcclusion()
             .sound(SoundType.AMETHYST_CLUSTER)
             .forceSolidOn()
-            .pushReaction(PushReaction.DESTROY)));
-    public static final DeferredBlock<Block> CLEARCRYSTALCLUSTER_STAGE_0= registerBlock("clearcrystalcluster_stage_0", () -> new Block(BlockBehaviour.Properties.of()
+            .pushReaction(PushReaction.DESTROY)
+            .forceSolidOn()));
+
+    public static final DeferredBlock<Block> CLEARCRYSTALCLUSTER_STAGE_0 = registerBlock("clearcrystalcluster_stage_0", () -> new CrystalCluster(3.0F, 4.0F, BlockBehaviour.Properties.of()
             .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("lighttech","clearcrystalcluster_stage_0")))
             .strength(0.5f)
             .noOcclusion()
             .sound(SoundType.AMETHYST_CLUSTER)
             .forceSolidOn()
             .pushReaction(PushReaction.DESTROY)
-            .noLootTable()));
-    public static final DeferredBlock<Block> CLEARCRYSTALCLUSTER_STAGE_1= registerBlock("clearcrystalcluster_stage_1", () -> new Block(BlockBehaviour.Properties.of()
-            .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("lighttech","clearcrystalcluster_stage_1")))
-            .strength(0.5f)
-            .noOcclusion()
-            .sound(SoundType.AMETHYST_CLUSTER)
-            .forceSolidOn()
-            .pushReaction(PushReaction.DESTROY)));
-    public static final DeferredBlock<Block> CLEARCRYSTALCLUSTER_STAGE_2= registerBlock("clearcrystalcluster_stage_2", () -> new Block(BlockBehaviour.Properties.of()
-            .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("lighttech","clearcrystalcluster_stage_2")))
-            .strength(0.5f)
-            .noOcclusion()
-            .sound(SoundType.AMETHYST_CLUSTER)
-            .forceSolidOn()
-            .pushReaction(PushReaction.DESTROY)));
-    public static final DeferredBlock<Block> CLEARCRYSTALCLUSTER_STAGE_3= registerBlock("clearcrystalcluster_stage_3", () -> new Block(BlockBehaviour.Properties.of()
-            .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("lighttech","clearcrystalcluster_stage_4")))
-            .strength(0.5f)
-            .noOcclusion()
-            .sound(SoundType.AMETHYST_CLUSTER)
-            .forceSolidOn()
-            .pushReaction(PushReaction.DESTROY)));
-    public static final DeferredBlock<Block> CLEARCRYSTALCLUSTER_STAGE_4= registerBlock("clearcrystalcluster_stage_4", () -> new Block(BlockBehaviour.Properties.of()
-            .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("lighttech","clearcrystalcluster_stage_4")))
-            .strength(0.5f)
-            .noOcclusion()
-            .sound(SoundType.AMETHYST_CLUSTER)
-            .forceSolidOn()
-            .pushReaction(PushReaction.DESTROY)));
+            .forceSolidOn()));
+
+    public static final DeferredBlock<Block> CLEARCRYSTALCLUSTER_STAGE_1 = registerBlock("clearcrystalcluster_stage_1", () -> new CrystalCluster(3.0F, 4.0F, BlockBehaviour.Properties.ofLegacyCopy((BlockBehaviour)CLEARCRYSTALCLUSTER.get())
+            .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("lighttech","clearcrystalcluster_stage_1")))));
+
+    public static final DeferredBlock<Block> CLEARCRYSTALCLUSTER_STAGE_2 = registerBlock("clearcrystalcluster_stage_2", () -> new CrystalCluster(3.0F, 4.0F, BlockBehaviour.Properties.ofLegacyCopy((BlockBehaviour)CLEARCRYSTALCLUSTER.get())
+            .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("lighttech","clearcrystalcluster_stage_2")))));
+
+    public static final DeferredBlock<Block> CLEARCRYSTALCLUSTER_STAGE_3 = registerBlock("clearcrystalcluster_stage_3", () -> new CrystalCluster(3.0F, 4.0F, BlockBehaviour.Properties.ofLegacyCopy((BlockBehaviour)CLEARCRYSTALCLUSTER.get())
+            .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("lighttech","clearcrystalcluster_stage_3")))));
+
+    public static final DeferredBlock<Block> CLEARCRYSTALCLUSTER_STAGE_4 = registerBlock("clearcrystalcluster_stage_4", () -> new CrystalCluster(3.0F, 4.0F, BlockBehaviour.Properties.ofLegacyCopy((BlockBehaviour)CLEARCRYSTALCLUSTER.get())            .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("lighttech","clearcrystalcluster_stage_4")))));
+
+    public static final DeferredBlock<Block> CLEARCRYSTALCLUSTER_NODE = registerBlock("clearcrystalcluster_node", CrystalClusterNode::new);
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
-
 }
 

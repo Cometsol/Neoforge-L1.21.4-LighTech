@@ -29,28 +29,15 @@
               "name": "lighttech:clearcrystalcluster"
             },
             {
-              "type": "minecraft:alternatives",
-              "children": [
+              "type": "minecraft:item",
+              "functions": [
                 {
-                  "type": "minecraft:item",
-                  "conditions": [
-                    {
-                      "condition": "minecraft:match_tool",
-                      "predicate": {
-                        "items": "#minecraft:cluster_max_harvestables"
-                      }
-                    }
-                  ],
-                  "functions": [
-                    {
-                      "add": false,
-                      "count": 5.0,
-                      "function": "minecraft:set_count"
-                    }
-                  ],
-                  "name": "lighttech:item/clearcrystalshard"
+                  "add": false,
+                  "count": 5.0,
+                  "function": "minecraft:set_count"
                 }
-              ]
+              ],
+              "name": "lighttech:clearcrystalshard"
             }
           ]
         }

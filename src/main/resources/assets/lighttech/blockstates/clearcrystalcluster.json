@@ -1,157 +1,27 @@
 {
   "variants": {
-    "stage=0,facing=up": {
-      "model": "lighttech:block/clearcrystalcluster_stage_0"
-    },
-    "stage=0,facing=down": {
-      "model": "lighttech:block/clearcrystalcluster_stage_0",
-      "x": 180
-    },
-    "stage=0,facing=east": {
-      "model": "lighttech:block/clearcrystalcluster_stage_0",
-      "x": 90,
-      "y": 90
-    },
-    "stage=0,facing=north": {
-      "model": "lighttech:block/clearcrystalcluster_stage_0",
-      "x": 90
-    },
-    "stage=0,facing=south": {
-      "model": "lighttech:block/clearcrystalcluster_stage_0",
-      "x": 90,
-      "y": 180
-    },
-    "stage=0,facing=west": {
-      "model": "lighttech:block/clearcrystalcluster_stage_0",
-      "x": 90,
-      "y": 270
-    },
-    "stage=1,facing=up": {
-      "model": "lighttech:block/clearcrystalcluster_stage=_1"
-    },
-    "stage=1,facing=down": {
-      "model": "lighttech:block/clearcrystalcluster_stage=_1",
-      "x": 180
-    },
-    "stage=1,facing=east": {
-      "model": "lighttech:block/clearcrystalcluster_stage=_1",
-      "x": 90,
-      "y": 90
-    },
-    "stage=1,facing=north": {
-      "model": "lighttech:block/clearcrystalcluster_stage=_1",
-      "x": 90
-    },
-    "stage=1,facing=south": {
-      "model": "lighttech:block/clearcrystalcluster_stage=_1",
-      "x": 90,
-      "y": 180
-    },
-    "stage=1,facing=west": {
-      "model": "lighttech:block/clearcrystalcluster_stage=_1",
-      "x": 90,
-      "y": 270
-    },
-    "stage=2,facing=up": {
-      "model": "lighttech:block/clearcrystalcluster_stage_2"
-    },
-    "stage=2,facing=down": {
-      "model": "lighttech:block/clearcrystalcluster_stage_2",
-      "x": 180
-    },
-    "stage=2,facing=east": {
-      "model": "lighttech:block/clearcrystalcluster_stage_2",
-      "x": 90,
-      "y": 90
-    },
-    "stage=2,facing=north": {
-      "model": "lighttech:block/clearcrystalcluster_stage_2",
-      "x": 90
-    },
-    "stage=2,facing=south": {
-      "model": "lighttech:block/clearcrystalcluster_stage_2",
-      "x": 90,
-      "y": 180
-    },
-    "stage=2,facing=west": {
-      "model": "lighttech:block/clearcrystalcluster_stage_2",
-      "x": 90,
-      "y": 270
-    },
-    "stage=3,facing=up": {
-      "model": "lighttech:block/clearcrystalcluster_stage_3"
-    },
-    "stage=3,facing=down": {
-      "model": "lighttech:block/clearcrystalcluster_stage_3",
-      "x": 180
-    },
-    "stage=3,facing=east": {
-      "model": "lighttech:block/clearcrystalcluster_stage_3",
-      "x": 90,
-      "y": 90
-    },
-    "stage=3,facing=north": {
-      "model": "lighttech:block/clearcrystalcluster_stage_3",
-      "x": 90
-    },
-    "stage=3,facing=south": {
-      "model": "lighttech:block/clearcrystalcluster_stage_3",
-      "x": 90,
-      "y": 180
-    },
-    "stage=3,facing=west": {
-      "model": "lighttech:block/clearcrystalcluster_stage_3",
-      "x": 90,
-      "y": 270
-    },
-    "stage=4,facing=up": {
-      "model": "lighttech:block/clearcrystalcluster_stage_4"
-    },
-    "stage=4,facing=down": {
-      "model": "lighttech:block/clearcrystalcluster_stage_4",
-      "x": 180
-    },
-    "stage=4,facing=east": {
-      "model": "lighttech:block/clearcrystalcluster_stage_4",
-      "x": 90,
-      "y": 90
-    },
-    "stage=4,facing=north": {
-      "model": "lighttech:block/clearcrystalcluster_stage_4",
-      "x": 90
-    },
-    "stage=4,facing=south": {
-      "model": "lighttech:block/clearcrystalcluster_stage_4",
-      "x": 90,
-      "y": 180
-    },
-    "stage=4,facing=west": {
-      "model": "lighttech:block/clearcrystalcluster_stage_4",
-      "x": 90,
-      "y": 270
-    },
-    "stage=5,facing=up": {
+    "facing=up": {
       "model": "lighttech:block/clearcrystalcluster"
     },
-    "stage=5,facing=down": {
+    "facing=down": {
       "model": "lighttech:block/clearcrystalcluster",
       "x": 180
     },
-    "stage=5,facing=east": {
+    "facing=east": {
       "model": "lighttech:block/clearcrystalcluster",
       "x": 90,
       "y": 90
     },
-    "stage=5,facing=north": {
+    "facing=north": {
       "model": "lighttech:block/clearcrystalcluster",
       "x": 90
     },
-    "stage=5,facing=south": {
+    ",facing=south": {
       "model": "lighttech:block/clearcrystalcluster",
       "x": 90,
       "y": 180
     },
-    "stage=5,facing=west": {
+    "facing=west": {
       "model": "lighttech:block/clearcrystalcluster",
       "x": 90,
       "y": 270
