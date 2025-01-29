@@ -22,6 +22,10 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) ->{
                       output.accept(ModItems.CLEARCRYSTALSHARD);
                       output.accept(ModItems.CLEARCRYSTALDUST);
+                        output.accept(ModItems.RESONATOR);
+                      output.accept(ModItems.CRYSTALRESONATOR_CLEAR);
+                        output.accept(ModItems.CRYSTALRESONATOR_FIERY);
+                        output.accept(ModItems.CRYSTALRESONATOR_VOID);
                     }).build());
 
     public static final Supplier<CreativeModeTab> LIGHTTECH_BLOCKS = CREATIVE_MODE_TAB.register("lighttech_blocks_tab",

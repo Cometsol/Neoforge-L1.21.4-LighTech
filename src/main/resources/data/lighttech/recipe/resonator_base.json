@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "tool",
+  "key": {
+    "i": "minecraft:iron",
+    "s": "minecraft:stick"
+  },
+  "pattern": [
+    "i i",
+    "i i",
+    " s "
+  ],
+  "result": {
+    "count": 1,
+    "id": "lighttech:crystalresonator_clear"
+  }
+}

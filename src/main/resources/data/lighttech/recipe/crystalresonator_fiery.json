@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "tool",
+  "key": {
+    "s":"lighttech:fierycrystalshard",
+    "b": "lighttech:resonator"
+  },
+  "pattern": [
+    " s ",
+    " b ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "lighttech:crystalresonator_fiery"
+  }
+}
