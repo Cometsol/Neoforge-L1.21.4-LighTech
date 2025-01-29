@@ -1,6 +1,7 @@
 {
   "block.lighttech.clearcrystal_block": "Clear Crystal Block",
   "block.lighttech.clearcrystalglass": "Clear Crystal Glass",
+  "block.lighttech.clearcrystalcluster_node": "Clear Crystal Cluster Node",
   "block.lighttech.clearcrystalcluster": "Clear Crystal Cluster",
   "block.lighttech.clearcrystalcluster_stage_0": "Clear Crystal Cluster",
   "block.lighttech.clearcrystalcluster_stage_1": "Clear Crystal Cluster",
@@ -12,6 +13,7 @@
   "item.lighttech.clearcrystaldust": "Clear Crystal Dust",
   "item.lighttech.clearcrystal_block": "Clear Crystal Block",
   "item.lighttech.clearcrystalglass": "Clear Crystal Glass",
+  "item.lighttech.clearcrystalcluster_node": "Clear Crystal Cluster Node",
   "item.lighttech.clearcrystalcluster": "Clear Crystal Cluster",
   "item.lighttech.clearcrystalcluster_stage_0": "Mound Clear Crystal Cluster",
   "item.lighttech.clearcrystalcluster_stage_1": "Tiny Clear Crystal Cluster",
