@@ -1,8 +1,8 @@
 package com.cometsol.lighttech;
 
-import com.cometsol.lighttech.Blocks.ModBlocks;
-import com.cometsol.lighttech.Items.ModCreativeModeTabs;
-import com.cometsol.lighttech.Items.ModItems;
+import com.cometsol.lighttech.Common.Blocks.ModBlocks;
+import com.cometsol.lighttech.Common.Items.ModCreativeModeTabs;
+import com.cometsol.lighttech.Common.Items.ModItems;
 import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 import net.neoforged.api.distmarker.Dist;

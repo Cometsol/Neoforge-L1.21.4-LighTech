@@ -1,9 +1,9 @@
-package com.cometsol.lighttech.Blocks;
+package com.cometsol.lighttech.Common.Blocks;
 
 
-import com.cometsol.lighttech.Blocks.Base.CrystalCluster;
-import com.cometsol.lighttech.Blocks.Base.CrystalClusterNode;
-import com.cometsol.lighttech.Items.ModItems;
+import com.cometsol.lighttech.Common.Blocks.Base.CrystalCluster;
+import com.cometsol.lighttech.Common.Blocks.Base.CrystalClusterNode;
+import com.cometsol.lighttech.Common.Items.ModItems;
 import com.cometsol.lighttech.LightTech;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;

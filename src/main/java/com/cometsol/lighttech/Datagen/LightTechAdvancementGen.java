@@ -1,6 +1,6 @@
 package com.cometsol.lighttech.Datagen;
 
-import com.cometsol.lighttech.Items.ModItems;
+import com.cometsol.lighttech.Common.Items.ModItems;
 import com.cometsol.lighttech.LightTech;
 import net.minecraft.advancements.*;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;

@@ -1,6 +1,6 @@
-package com.cometsol.lighttech.Items;
+package com.cometsol.lighttech.Common.Items;
 
-import com.cometsol.lighttech.Items.utilita_tools.CrystalResonator;
+import com.cometsol.lighttech.Common.Items.utilita_tools.CrystalResonator;
 import com.cometsol.lighttech.LightTech;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;

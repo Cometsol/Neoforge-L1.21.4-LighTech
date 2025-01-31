@@ -1,6 +1,6 @@
-package com.cometsol.lighttech.Items;
+package com.cometsol.lighttech.Common.Items;
 
-import com.cometsol.lighttech.Blocks.ModBlocks;
+import com.cometsol.lighttech.Common.Blocks.ModBlocks;
 import com.cometsol.lighttech.LightTech;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;

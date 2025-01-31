@@ -1,6 +1,6 @@
-package com.cometsol.lighttech.Blocks.Base;
+package com.cometsol.lighttech.Common.Blocks.Base;
 
-import com.cometsol.lighttech.Blocks.ModBlocks;
+import com.cometsol.lighttech.Common.Blocks.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -13,7 +13,6 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.block.state.properties.Property;
 import org.jetbrains.annotations.NotNull;
 
 public class CrystalClusterNode extends BuddingAmethystBlock {
