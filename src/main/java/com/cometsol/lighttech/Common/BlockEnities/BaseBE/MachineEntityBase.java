@@ -41,7 +41,7 @@ public class MachineEntityBase extends BlockEntity {
     public UUID placedByUUID;
     protected int direction = 0;
     protected int tickSpeed = 20;
-    protected int oprationTicks = -1;
+    protected int operationTicks = -1;
     protected UsefulFakePlayer usefulFakePlayer;
     protected final Map<ChunkPos, Boolean> chunkTestCache = new Object2BooleanOpenHashMap();
 
@@ -63,27 +63,27 @@ public class MachineEntityBase extends BlockEntity {
     public void clearProtectionCache() { this.chunkTestCache.clear();}
 
     public void  handleTicks() {
-        if(this.oprationTicks <= 0) {
-            this.oprationTicks = this.tickSpeed;
+        if(this.operationTicks <= 0) {
+            this.operationTicks = this.tickSpeed;
         }
-        --this.oprationTicks;
+        --this.operationTicks;
     }
 
     public int getTickSpeed() {return this.tickSpeed;}
 
     public void setTickSpeed(int newTickSpeed) {
         this.tickSpeed = newTickSpeed;
-        if (this.oprationTicks > this.tickSpeed) {
-            this.oprationTicks = this.tickSpeed;
+        if (this.operationTicks > this.tickSpeed) {
+            this.operationTicks = this.tickSpeed;
         }
         this.markDirtyClient();
     }
 
     public boolean canRun() {
         if(!(this instanceof  RedstoneControlledBE redstoneControlledBE)) {
-            return this.oprationTicks == 0;
+            return this.operationTicks == 0;
         } else {
-            return this.oprationTicks == 0 || redstoneControlledBE.getRedstoneControlData().redstoneMode.equals(MiscHelpersRedstoneMode.PULSE);
+            return this.operationTicks == 0 || redstoneControlledBE.getRedstoneControlData().redstoneMode.equals(MiscHelpersRedstoneMode.PULSE);
         }
     }
 
