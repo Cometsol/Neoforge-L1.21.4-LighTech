@@ -5,8 +5,11 @@ import com.cometsol.lighttech.Common.BlockEnities.BaseBE.PoweredMachineBE;
 import com.cometsol.lighttech.Common.Capabilities.MachineEnergyStorage;
 import com.cometsol.lighttech.Common.Handlers.FilterBasicHandler;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.attachment.AttachmentType;
+import net.neoforged.neoforge.common.world.chunk.LoadingValidationCallback;
+import net.neoforged.neoforge.common.world.chunk.TicketController;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -15,6 +18,7 @@ import java.util.function.Supplier;
 import static net.neoforged.neoforge.registries.NeoForgeRegistries.Keys;
 
 public class Registration {
+    public static final TicketController TICKET_CONTROLLER = new TicketController(ResourceLocation.fromNamespaceAndPath("lighttech", "chunk_loader"), (LoadingValidationCallback)null);
     private static final DeferredRegister<AttachmentType<?>> ATTACHMENT_TYPES;
     public static final Supplier<AttachmentType<ItemStackHandler>> HANDLER;
     public static final Supplier<AttachmentType<ItemStackHandler>> MACHINE_HANDLER;

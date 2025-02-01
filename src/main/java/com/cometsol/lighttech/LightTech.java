@@ -3,6 +3,7 @@ package com.cometsol.lighttech;
 import com.cometsol.lighttech.Common.Blocks.ModBlocks;
 import com.cometsol.lighttech.Common.Items.ModCreativeModeTabs;
 import com.cometsol.lighttech.Common.Items.ModItems;
+import net.neoforged.neoforge.common.world.chunk.RegisterTicketControllersEvent;
 import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 import net.neoforged.api.distmarker.Dist;
@@ -33,6 +34,7 @@ public class LightTech {
         modEventBus.addListener(this::commonSetup);
 
         NeoForge.EVENT_BUS.register(this);
+        modEventBus.addListener(this::registerChunkLoaders);
 
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
@@ -42,6 +44,10 @@ public class LightTech {
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+    }
+
+    private void registerChunkLoaders(RegisterTicketControllersEvent event) {
+        event.register(Registration.TICKET_CONTROLLER);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

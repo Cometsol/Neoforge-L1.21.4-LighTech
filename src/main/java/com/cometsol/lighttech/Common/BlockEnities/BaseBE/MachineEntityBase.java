@@ -191,7 +191,7 @@ public class MachineEntityBase extends BlockEntity {
         return areaAffectingBE.getDefaultAreaData((Direction)this.getBlockState().getValue(BlockStateProperties.FACING));
     }
 
-    public boolean isDefualtSetting() {
+    public boolean isDefaultSettings() {
         if(this.tickSpeed != 20) {
             return false;
         } else if (this.direction != 0) {
