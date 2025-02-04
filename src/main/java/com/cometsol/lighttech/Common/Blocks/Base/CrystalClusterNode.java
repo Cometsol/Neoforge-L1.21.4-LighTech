@@ -28,20 +28,51 @@ public class CrystalClusterNode extends BuddingAmethystBlock {
         if (random.nextInt(5) == 0) {
             Direction direction = DIRECTIONS[random.nextInt(DIRECTIONS.length)];
             BlockPos blockpos = pos.relative(direction);
+            BlockPos self = pos;
             BlockState blockstate = level.getBlockState(blockpos);
             Block block = null;
-            if (canClusterGrowAtState(blockstate)) {
-                block = ModBlocks.CLEARCRYSTALCLUSTER_STAGE_0.get();
-            } else if (blockstate.is(ModBlocks.CLEARCRYSTALCLUSTER_STAGE_0.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
-                block = ModBlocks.CLEARCRYSTALCLUSTER_STAGE_1.get();
-            } else if (blockstate.is(ModBlocks.CLEARCRYSTALCLUSTER_STAGE_1.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
-                block = ModBlocks.CLEARCRYSTALCLUSTER_STAGE_2.get();
-            } else if (blockstate.is(ModBlocks.CLEARCRYSTALCLUSTER_STAGE_2.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
-                block =  ModBlocks.CLEARCRYSTALCLUSTER_STAGE_3.get();
-            } else if (blockstate.is(ModBlocks.CLEARCRYSTALCLUSTER_STAGE_3.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
-                block =  ModBlocks.CLEARCRYSTALCLUSTER_STAGE_4.get();
-            } else if (blockstate.is(ModBlocks.CLEARCRYSTALCLUSTER_STAGE_4.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
-                block =  ModBlocks.CLEARCRYSTALCLUSTER.get();
+            if(state.is(ModBlocks.CLEARCRYSTALCLUSTER_NODE)){
+                if (canClusterGrowAtState(blockstate)) {
+                    block = ModBlocks.CLEARCRYSTALCLUSTER_STAGE_0.get();
+                } else if (blockstate.is(ModBlocks.CLEARCRYSTALCLUSTER_STAGE_0.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
+                    block = ModBlocks.CLEARCRYSTALCLUSTER_STAGE_1.get();
+                } else if (blockstate.is(ModBlocks.CLEARCRYSTALCLUSTER_STAGE_1.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
+                    block = ModBlocks.CLEARCRYSTALCLUSTER_STAGE_2.get();
+                } else if (blockstate.is(ModBlocks.CLEARCRYSTALCLUSTER_STAGE_2.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
+                    block =  ModBlocks.CLEARCRYSTALCLUSTER_STAGE_3.get();
+                } else if (blockstate.is(ModBlocks.CLEARCRYSTALCLUSTER_STAGE_3.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
+                    block =  ModBlocks.CLEARCRYSTALCLUSTER_STAGE_4.get();
+                } else if (blockstate.is(ModBlocks.CLEARCRYSTALCLUSTER_STAGE_4.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
+                    block = ModBlocks.CLEARCRYSTALCLUSTER.get();
+                }
+            } else if (state.is(ModBlocks.FIERYCRYSTALCLUSTER_NODE)) {
+                if (canClusterGrowAtState(blockstate)) {
+                    block = ModBlocks.FIERYCRYSTALCLUSTER_STAGE_0.get();
+                } else if (blockstate.is(ModBlocks.FIERYCRYSTALCLUSTER_STAGE_0.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
+                    block = ModBlocks.FIERYCRYSTALCLUSTER_STAGE_1.get();
+                } else if (blockstate.is(ModBlocks.FIERYCRYSTALCLUSTER_STAGE_1.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
+                    block = ModBlocks.FIERYCRYSTALCLUSTER_STAGE_2.get();
+                } else if (blockstate.is(ModBlocks.FIERYCRYSTALCLUSTER_STAGE_2.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
+                    block =  ModBlocks.FIERYCRYSTALCLUSTER_STAGE_3.get();
+                } else if (blockstate.is(ModBlocks.FIERYCRYSTALCLUSTER_STAGE_3.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
+                    block =  ModBlocks.FIERYCRYSTALCLUSTER_STAGE_4.get();
+                } else if (blockstate.is(ModBlocks.FIERYCRYSTALCLUSTER_STAGE_4.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
+                    block = ModBlocks.FIERYCRYSTALCLUSTER.get();
+                }
+            } else if (state.is(ModBlocks.VOIDCRYSTALCLUSTER_NODE)) {
+                if (canClusterGrowAtState(blockstate)) {
+                    block = ModBlocks.VOIDCRYSTALCLUSTER_STAGE_0.get();
+                } else if (blockstate.is(ModBlocks.VOIDCRYSTALCLUSTER_STAGE_0.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
+                    block = ModBlocks.VOIDCRYSTALCLUSTER_STAGE_1.get();
+                } else if (blockstate.is(ModBlocks.VOIDCRYSTALCLUSTER_STAGE_1.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
+                    block = ModBlocks.VOIDCRYSTALCLUSTER_STAGE_2.get();
+                } else if (blockstate.is(ModBlocks.VOIDCRYSTALCLUSTER_STAGE_2.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
+                    block =  ModBlocks.VOIDCRYSTALCLUSTER_STAGE_3.get();
+                } else if (blockstate.is(ModBlocks.VOIDCRYSTALCLUSTER_STAGE_3.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
+                    block =  ModBlocks.VOIDCRYSTALCLUSTER_STAGE_4.get();
+                } else if (blockstate.is(ModBlocks.VOIDCRYSTALCLUSTER_STAGE_4.get()) && blockstate.getValue(AmethystClusterBlock.FACING) == direction) {
+                    block = ModBlocks.VOIDCRYSTALCLUSTER.get();
+                }
             }
             if (block != null) {
                 BlockState blockstate1 = block.defaultBlockState().setValue(AmethystClusterBlock.FACING, direction);

@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=up": {
+      "model": "lighttech:block/voidcrystalcluster"
+    },
+    "facing=down": {
+      "model": "lighttech:block/voidcrystalcluster",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "lighttech:block/voidcrystalcluster",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "lighttech:block/voidcrystalcluster",
+      "x": 90
+    },
+    ",facing=south": {
+      "model": "lighttech:block/voidcrystalcluster",
+      "x": 90,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "lighttech:block/voidcrystalcluster",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

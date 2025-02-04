@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+     "lighttech:voidcrystal_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "lighttech:voidcrystalshard"
+  }
+}

@@ -7,6 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -19,30 +20,27 @@ public class ModCreativeModeTabs {
     public static final Supplier<CreativeModeTab> LIGHTTECH_ITEMS = CREATIVE_MODE_TAB.register("lighttech_items_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CLEARCRYSTALSHARD.get()))
                     .title(Component.translatable("creativetab.lighttech.lighttech_items"))
-                    .displayItems((itemDisplayParameters, output) ->{
+                    .displayItems((_, output) ->{
+                      output.accept(ModItems.RESONATOR);
                       output.accept(ModItems.CLEARCRYSTALSHARD);
                       output.accept(ModItems.CLEARCRYSTALDUST);
-                        output.accept(ModItems.RESONATOR);
                       output.accept(ModItems.CRYSTALRESONATOR_CLEAR);
-                        output.accept(ModItems.CRYSTALRESONATOR_FIERY);
-                        output.accept(ModItems.CRYSTALRESONATOR_VOID);
+                      output.accept(ModItems.FIERYCRYSTALSHARD);
+                      output.accept(ModItems.FIERYCRYSTALDUST);
+                      output.accept(ModItems.CRYSTALRESONATOR_FIERY);
+                      output.accept(ModItems.VOIDCRYSTALSHARD);
+                      output.accept(ModItems.VOIDCRYSTALDUST);
+                      output.accept(ModItems.CRYSTALRESONATOR_VOID);
                     }).build());
 
     public static final Supplier<CreativeModeTab> LIGHTTECH_BLOCKS = CREATIVE_MODE_TAB.register("lighttech_blocks_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.CLEARCRYSTAL_BLOCK))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(LightTech.MODID, "lighttech_items_tab"))
                     .title(Component.translatable("creativetab.lighttech.lighttech_blocks"))
-                    .displayItems((itemDisplayParameters, output) ->{
-                        output.accept(ModBlocks.CLEARCRYSTAL_BLOCK);
-                        output.accept(ModBlocks.CLEARCRYSTALGLASS);
-                        output.accept(ModBlocks.CLEARCRYSTALCLUSTER_NODE);
-                        output.accept(ModBlocks.CLEARCRYSTALCLUSTER);
-                        output.accept(ModBlocks.CLEARCRYSTALCLUSTER_STAGE_0);
-                        output.accept(ModBlocks.CLEARCRYSTALCLUSTER_STAGE_1);
-                        output.accept(ModBlocks.CLEARCRYSTALCLUSTER_STAGE_2);
-                        output.accept(ModBlocks.CLEARCRYSTALCLUSTER_STAGE_3);
-                        output.accept(ModBlocks.CLEARCRYSTALCLUSTER_STAGE_4);
-                    }).build());
+                    .displayItems((_, output) -> ModBlocks.BLOCKS.getEntries().forEach((e) ->{
+                        Block block = e.get();
+                        output.accept(block);
+                    })).build());
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);

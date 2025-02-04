@@ -3,7 +3,9 @@ package com.cometsol.lighttech;
 import com.cometsol.lighttech.Common.Blocks.ModBlocks;
 import com.cometsol.lighttech.Common.Items.ModCreativeModeTabs;
 import com.cometsol.lighttech.Common.Items.ModItems;
+import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.common.world.chunk.RegisterTicketControllersEvent;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 import org.slf4j.Logger;
 import com.mojang.logging.LogUtils;
 import net.neoforged.api.distmarker.Dist;
@@ -58,16 +60,13 @@ public class LightTech {
     }
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
-
+        public static void onClientSetup(FMLClientSetupEvent event) {
         }
     }
 }

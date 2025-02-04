@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=up": {
+      "model": "lighttech:block/fierycrystalcluster_stage_4"
+    },
+    "facing=down": {
+      "model": "lighttech:block/fierycrystalcluster_stage_4",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "lighttech:block/fierycrystalcluster_stage_4",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "lighttech:block/fierycrystalcluster_stage_4",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "lighttech:block/fierycrystalcluster_stage_4",
+      "x": 90,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "lighttech:block/fierycrystalcluster_stage_4",
+      "x": 90,
+      "y": 270
+    }
+  }
+}
