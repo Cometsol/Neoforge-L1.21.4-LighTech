@@ -8,14 +8,13 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Item.Properties;
-import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModItems {
 
-    private static final DeferredRegister.Items BLOCKITEMS = DeferredRegister.createItems(LightTech.MODID);
+    public static final DeferredRegister.Items BLOCKITEMS = DeferredRegister.createItems(LightTech.MODID);
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(LightTech.MODID);
     //items
     public static final DeferredItem<Item> CLEARCRYSTALDUST = ITEMS.registerItem("clearcrystaldust",Item::new, new Properties()
@@ -53,6 +52,7 @@ public class ModItems {
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
+        BLOCKITEMS.register(eventBus);
     }
 
 }

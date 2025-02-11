@@ -3,6 +3,11 @@ package com.cometsol.lighttech;
 import com.cometsol.lighttech.Common.Blocks.ModBlocks;
 import com.cometsol.lighttech.Common.Items.ModCreativeModeTabs;
 import com.cometsol.lighttech.Common.Items.ModItems;
+import com.cometsol.lighttech.Datagen.LighttechBlockTags;
+import com.cometsol.lighttech.Datagen.LighttechItemTags;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.neoforged.fml.ModList;
 import net.neoforged.neoforge.common.world.chunk.RegisterTicketControllersEvent;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
@@ -20,6 +25,8 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+
+import java.util.concurrent.CompletableFuture;
 
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
@@ -67,6 +74,13 @@ public class LightTech {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+
+        }
+
+        @SubscribeEvent
+        public static void gatherData(GatherDataEvent.Server event) {
+            event.createProvider(LighttechBlockTags::new);
+            //event.createProvider(LighttechItemTags::new);
         }
     }
 }

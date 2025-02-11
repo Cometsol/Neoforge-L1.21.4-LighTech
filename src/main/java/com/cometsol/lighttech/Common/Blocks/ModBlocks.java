@@ -37,7 +37,7 @@ public class ModBlocks {
     }
 
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().setId(ResourceKey.create(Registries.ITEM, block.getId()))));
+        ModItems.BLOCKITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().setId(ResourceKey.create(Registries.ITEM, block.getId()))));
     }
     //storage
     public static final DeferredBlock<Block> CLEARCRYSTAL_BLOCK = registerBlock("clearcrystal_block", () -> new Block(BlockBehaviour.Properties.of()

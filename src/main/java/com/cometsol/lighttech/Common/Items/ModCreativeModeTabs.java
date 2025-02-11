@@ -6,6 +6,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
@@ -20,24 +21,16 @@ public class ModCreativeModeTabs {
     public static final Supplier<CreativeModeTab> LIGHTTECH_ITEMS = CREATIVE_MODE_TAB.register("lighttech_items_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CLEARCRYSTALSHARD.get()))
                     .title(Component.translatable("creativetab.lighttech.lighttech_items"))
-                    .displayItems((_, output) ->{
-                      output.accept(ModItems.RESONATOR);
-                      output.accept(ModItems.CLEARCRYSTALSHARD);
-                      output.accept(ModItems.CLEARCRYSTALDUST);
-                      output.accept(ModItems.CRYSTALRESONATOR_CLEAR);
-                      output.accept(ModItems.FIERYCRYSTALSHARD);
-                      output.accept(ModItems.FIERYCRYSTALDUST);
-                      output.accept(ModItems.CRYSTALRESONATOR_FIERY);
-                      output.accept(ModItems.VOIDCRYSTALSHARD);
-                      output.accept(ModItems.VOIDCRYSTALDUST);
-                      output.accept(ModItems.CRYSTALRESONATOR_VOID);
-                    }).build());
+                    .displayItems((displayParameters, output) -> ModItems.ITEMS.getEntries().forEach((e) ->{
+                        Item item = e.get();
+                        output.accept(item);
+                    })).build());
 
     public static final Supplier<CreativeModeTab> LIGHTTECH_BLOCKS = CREATIVE_MODE_TAB.register("lighttech_blocks_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.CLEARCRYSTAL_BLOCK))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(LightTech.MODID, "lighttech_items_tab"))
                     .title(Component.translatable("creativetab.lighttech.lighttech_blocks"))
-                    .displayItems((_, output) -> ModBlocks.BLOCKS.getEntries().forEach((e) ->{
+                    .displayItems((displayParameters, output) -> ModBlocks.BLOCKS.getEntries().forEach((e) ->{
                         Block block = e.get();
                         output.accept(block);
                     })).build());

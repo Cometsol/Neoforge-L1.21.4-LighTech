@@ -46,17 +46,17 @@ public class FieryCrystal extends Item {
         if (entity instanceof Player player) {
             if (player.hasEffect(MobEffects.FIRE_RESISTANCE)) {
                 return true;
-            }else if(player.getInventory().contains(new ItemStack((ItemLike) ModItems.LEATHERGLOVES))) {
+            } else if (player.getInventory().contains(new ItemStack((ItemLike) ModItems.LEATHERGLOVES))) {
                 int slot = player.getInventory().findSlotMatchingItem(new ItemStack((ItemLike) ModItems.LEATHERGLOVES));
                 player.getInventory().getItem(slot).hurtAndBreak(1, ((ServerLevel) level), player,
-                        _ -> player.getInventory().getItem(slot));
+                        item -> player.getInventory().getItem(slot));
                 return true;
             } else {
                 return false;
             }
 
         }
-        return false;
+        return true;
     }
 
     public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flagIn) {
