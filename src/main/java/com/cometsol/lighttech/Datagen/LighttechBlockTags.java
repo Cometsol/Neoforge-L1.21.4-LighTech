@@ -18,7 +18,7 @@ public class LighttechBlockTags extends BlockTagsProvider {
 
 
     public static final TagKey<Block> ECLISEGATEDENY = BlockTags.create(ResourceLocation.fromNamespaceAndPath("justdirethings", "eclipsegate_deny"));
-    public static final TagKey<Block> ATTUNED = BlockTags.create(ResourceLocation.fromNamespaceAndPath("lightttech", "attuned"));
+    public static final TagKey<Block> ATTUNED = BlockTags.create(ResourceLocation.fromNamespaceAndPath("lighttech", "attuned"));
 
     public LighttechBlockTags(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider){
         super(packOutput, lookupProvider, LightTech.MODID);
@@ -53,7 +53,8 @@ public class LighttechBlockTags extends BlockTagsProvider {
                 .add(ModBlocks.VOIDCRYSTALCLUSTER_STAGE_4.get())
                 .add(ModBlocks.CLEARCRYSTALGLASS.get())
                 .add(ModBlocks.FIERYCRYSTALGLASS.get())
-                .add(ModBlocks.VOIDCRYSTALGLASS.get());
+                .add(ModBlocks.VOIDCRYSTALGLASS.get())
+                .replace(false);
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.CLEARCRYSTAL_BLOCK.get())
@@ -82,7 +83,8 @@ public class LighttechBlockTags extends BlockTagsProvider {
                 .add(ModBlocks.VOIDCRYSTALCLUSTER_STAGE_4.get())
                 .add(ModBlocks.CLEARCRYSTALGLASS.get())
                 .add(ModBlocks.FIERYCRYSTALGLASS.get())
-                .add(ModBlocks.VOIDCRYSTALGLASS.get());
+                .add(ModBlocks.VOIDCRYSTALGLASS.get())
+                .replace(false);
 
         tag(ATTUNED)
                 .add(ModBlocks.CLEARCRYSTALCLUSTER_NODE.get())
