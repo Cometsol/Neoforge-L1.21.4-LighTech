@@ -3,6 +3,8 @@ package com.cometsol.lighttech.Common.Items.Special;
 import com.cometsol.lighttech.Common.Items.ModItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -28,13 +30,11 @@ public class FieryCrystal extends Item {
             if (entity instanceof LivingEntity) {
                 LivingEntity livingEntity = (LivingEntity)entity;
                 if (world.random.nextFloat() < 0.005F) {
-                    if (this.fieryProtection(entity, world)) {
-                        if(livingEntity.hasEffect(MobEffects.HARM)) {
-                            livingEntity.removeEffect(MobEffects.HARM);
-                        }
-                    } else {
-                        if(!livingEntity.hasEffect(MobEffects.HARM)) {
-                            livingEntity.addEffect(new MobEffectInstance(MobEffects.HARM, 100, 5, false, false));
+                    if (livingEntity instanceof Player player) {
+                        if(!this.fieryProtection(entity, world) && !player.isCreative()) {
+                            if(livingEntity.invulnerableTime < 1) {
+                                player.hurt(livingEntity.damageSources().inFire(), 1);
+                            }
                         }
                     }
                 }
